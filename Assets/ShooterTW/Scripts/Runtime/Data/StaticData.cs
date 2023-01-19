@@ -6,8 +6,7 @@ namespace Client
     public class StaticData : ScriptableObject
     {
         public GameObject playerPrefab;
-        public float playerSpeed = 1f;
-        
-        
+        public int playerHealth = 100;
+        public float playerSpeed = 3f;
     };
 }

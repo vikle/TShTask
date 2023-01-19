@@ -8,12 +8,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Systems/PlayerRotationSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Systems/PlayerInputSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Systems/ProjectileHitSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/UnityComponents/PlayerView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Services/RuntimeData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Systems/DamageEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Systems/SpawnProjectileSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Data/StaticData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/UnityComponents/EnemyView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Components/TransformRef.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Systems/PlayerMoveSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Components/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Components/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Systems/PlayerInitSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Components/PlayerInputData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Components/SpawnProjectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c6b52566f59b49fc861a7812a1ea2f6b157a00/b9/61dfe254/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Data/StaticData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Systems/ProjectileMoveSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/Core/Components/HasWeapon.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2KUN6pzX81S21mKt77K0d41QkGK" />
   <component name="ProjectViewState">

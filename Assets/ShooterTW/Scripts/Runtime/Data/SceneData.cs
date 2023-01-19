@@ -6,10 +6,8 @@ namespace Client
 {
     public class SceneData : MonoBehaviour
     {
+        public Camera mainCamera;
         public Transform playerSpawnPoint;
-        
-        
-        
     };
 }
 
