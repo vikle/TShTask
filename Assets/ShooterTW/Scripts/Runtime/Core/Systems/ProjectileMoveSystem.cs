@@ -13,9 +13,9 @@ namespace Client
             {
                 ref var projectile = ref m_filter.Get1(i);
             
-                var position = projectile.projectileGO.transform.position;
+                var position = projectile.transform.position;
                 position += projectile.direction * projectile.speed * Time.deltaTime;
-                projectile.projectileGO.transform.position = position;
+                projectile.transform.position = position;
             
                 var delta = position - projectile.previousPos;
                 bool hit = Physics.SphereCast(projectile.previousPos, projectile.radius, delta.normalized, out var hit_info, delta.magnitude);
@@ -27,7 +27,7 @@ namespace Client
                     projectile_hit.raycastHit = hit_info;
                 }
 
-                projectile.previousPos = projectile.projectileGO.transform.position;
+                projectile.previousPos = projectile.transform.position;
             }
         }
     }

@@ -2389,6 +2389,7 @@ GameObject:
   - component: {fileID: 8465319830999949119}
   - component: {fileID: 8765891708867115077}
   - component: {fileID: 2928764086763108022}
+  - component: {fileID: 100125544911008333}
   m_Layer: 0
   m_Name: Chomper
   m_TagString: Untagged
@@ -2427,11 +2428,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navMeshAgent: {fileID: 2928764086763108022}
-  meleeAttackDistance: 0
-  meleeAttackInterval: 0
-  triggerDistance: 0
-  startHealth: 0
-  damage: 0
+  meleeAttackDistance: 0.5
+  meleeAttackInterval: 0.33
+  triggerDistance: 100
+  startHealth: 100
+  damage: 5
 --- !u!195 &2928764086763108022
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2454,6 +2455,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &100125544911008333
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8465319831000171295}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.25, z: 0}
 --- !u!1 &8465319831000171329
 GameObject:
   m_ObjectHideFlags: 0

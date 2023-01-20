@@ -10,6 +10,7 @@ namespace Client
         public Transform projectileSocket;
         public float projectileSpeed;
         public float projectileRadius;
+        public float projectileLifetime;
         public int weaponDamage;
     };
 }

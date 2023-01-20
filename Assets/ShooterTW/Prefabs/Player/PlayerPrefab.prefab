@@ -145,8 +145,9 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8089236662387531238, guid: 4388c42398c1aed4882c7a8b90bca297, type: 3}
   projectileSocket: {fileID: 1793817079467667216}
   weaponDamage: 10
-  projectileSpeed: 3
+  projectileSpeed: 20
   projectileRadius: 0.03
+  projectileLifetime: 3
 --- !u!143 &3917244658505413910
 CharacterController:
   m_ObjectHideFlags: 0

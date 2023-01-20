@@ -24,7 +24,7 @@ namespace Client
                     }
                 }
 
-                projectile.projectileGO.SetActive(false);
+                projectile.Deactivate();
                 m_filter.GetEntity(i).Destroy();
             }
         }

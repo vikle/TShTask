@@ -9,7 +9,7 @@ namespace Client
 
         public void Shoot()
         {
-            entity.Get<HasWeapon>().weapon.Get<Shoot>();
+            entity.Get<HasWeapon>().current.Get<Shoot>();
         }
     };
 }

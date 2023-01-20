@@ -17,6 +17,7 @@ namespace Client
             
             ref var player = ref player_entity.Get<Player>();
             ref var input_data = ref player_entity.Get<PlayerInputData>();
+            ref var has_weapon = ref player_entity.Get<HasWeapon>();
             ref var transform_ref = ref player_entity.Get<TransformRef>();
             ref var health = ref player_entity.Get<Health>();
             ref var weapon = ref weapon_entity.Get<Weapon>();
@@ -29,14 +30,16 @@ namespace Client
             var weapon_view = player_go.GetComponent<WeaponSettings>();
             
             weapon.owner = player_entity;
+            weapon.weaponDamage = weapon_view.weaponDamage;
             weapon.projectilePrefab = weapon_view.projectilePrefab;
             weapon.projectileRadius = weapon_view.projectileRadius;
             weapon.projectileSocket = weapon_view.projectileSocket;
             weapon.projectileSpeed = weapon_view.projectileSpeed;
-            weapon.weaponDamage = weapon_view.weaponDamage;
+            weapon.projectileLifetime = weapon_view.projectileLifetime;
 
             player_go.GetComponent<PlayerView>().entity = player_entity;
-            
+
+            has_weapon.current = weapon_entity;
             health.value = m_staticData.playerHealth;
             transform_ref.transform = player_go.transform;
             m_runtimeData.playerEntity = player_entity;

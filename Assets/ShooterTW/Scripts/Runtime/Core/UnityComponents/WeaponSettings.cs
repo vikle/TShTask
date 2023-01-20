@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,5 +12,6 @@ namespace Client
         public int weaponDamage;
         public float projectileSpeed;
         public float projectileRadius;
+        public float projectileLifetime;
     };
 }

@@ -4,6 +4,6 @@ namespace Client
 {
     public struct HasWeapon
     {
-        public EcsEntity weapon;
+        public EcsEntity current;
     };
 }
