@@ -1,5 +1,7 @@
 # TShTask
 
+Билд: https://dropmefiles.com/SRJdD
+
 В ТЗ использована ESC - LeoESC
 Основные файлы проекта лежат в ShooterTW
 - Data/StaticData.asset - содержит настройки игрового баланса (игрок, его здоровье/защита) и префабы врагов.
