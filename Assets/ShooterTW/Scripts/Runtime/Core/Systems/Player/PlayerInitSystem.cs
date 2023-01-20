@@ -23,6 +23,7 @@ namespace Client
             ref var weapon = ref weapon_entity.Get<Weapon>();
 
             var player_go = Object.Instantiate(m_staticData.playerPrefab, m_sceneData.playerSpawnPoint.position, Quaternion.identity);
+            player.gameObject = player_go;
             player.transform = player_go.transform;
             player.controller = player_go.GetComponent<CharacterController>();
             player.playerSpeed = m_staticData.playerSpeed;
@@ -31,16 +32,18 @@ namespace Client
             
             weapon.owner = player_entity;
             weapon.weaponDamage = weapon_view.weaponDamage;
+            weapon.fireInterval = weapon_view.fireInterval;
             weapon.projectilePrefab = weapon_view.projectilePrefab;
             weapon.projectileRadius = weapon_view.projectileRadius;
             weapon.projectileSocket = weapon_view.projectileSocket;
             weapon.projectileSpeed = weapon_view.projectileSpeed;
             weapon.projectileLifetime = weapon_view.projectileLifetime;
-
-            player_go.GetComponent<PlayerView>().entity = player_entity;
-
+            
             has_weapon.current = weapon_entity;
+            
+            health.shield = m_staticData.playerShield;
             health.value = m_staticData.playerHealth;
+            
             transform_ref.transform = player_go.transform;
             m_runtimeData.playerEntity = player_entity;
         }

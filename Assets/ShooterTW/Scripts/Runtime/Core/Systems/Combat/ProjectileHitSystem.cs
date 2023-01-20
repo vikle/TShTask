@@ -4,8 +4,8 @@ namespace Client
 {
     sealed class ProjectileHitSystem : IEcsRunSystem
     {
+        readonly EcsWorld m_world;
         EcsFilter<Projectile, ProjectileHit> m_filter;
-        EcsWorld m_world;
 
         public void Run()
         {

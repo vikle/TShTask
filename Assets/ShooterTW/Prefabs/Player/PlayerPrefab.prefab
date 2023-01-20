@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 3375526857989341063}
   - component: {fileID: 3360439834814872231}
   - component: {fileID: 3352307927479137019}
-  - component: {fileID: -2635347168688113065}
   - component: {fileID: 8482995393993812448}
   - component: {fileID: 3917244658505413910}
   m_Layer: 0
@@ -118,18 +117,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-2635347168688113065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3374071142278502493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e234b0abf553e9944b28e0fec1f9f26c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8482995393993812448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 8089236662387531238, guid: 4388c42398c1aed4882c7a8b90bca297, type: 3}
   projectileSocket: {fileID: 1793817079467667216}
-  weaponDamage: 10
+  fireInterval: 0.1
+  weaponDamage: 35
   projectileSpeed: 20
   projectileRadius: 0.03
   projectileLifetime: 3

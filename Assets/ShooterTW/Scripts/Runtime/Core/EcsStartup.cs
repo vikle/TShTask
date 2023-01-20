@@ -7,6 +7,7 @@ namespace Client
     {
         public StaticData configuration;
         public SceneData sceneData;
+        public UICanvas uiCanvas;
 
         EcsWorld m_world;
         EcsSystems m_updateSystems;
@@ -25,7 +26,7 @@ namespace Client
                 .Add(new PlayerInputSystem())
                 .Add(new PlayerMoveSystem())
                 .Add(new PlayerRotationSystem())
-                //.Add(new PlayerDeathSystem())
+                .Add(new PlayerDeathSystem())
                 .Add(new WeaponShootSystem())
                 .Add(new SpawnProjectileSystem())
                 .Add(new ProjectileMoveSystem())
@@ -33,12 +34,13 @@ namespace Client
                 .Add(new ProjectileLifetimeSystem())
                 .Add(new DamageSystem())
                 .Add(new EnemyInitSystem())
+                .Add(new EnemySpawnSystem())
                 .Add(new EnemyIdleSystem())
                 .Add(new EnemyFollowSystem())
                 .Add(new EnemyDeathSystem())
-                //.Add(new PauseSystem())
                 .Inject(configuration)
                 .Inject(sceneData)
+                .Inject(uiCanvas)
                 .Inject(runtime_data)
                 .Init();
         }

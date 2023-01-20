@@ -1,17 +1,22 @@
-using Leopotam.Ecs;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace Client
 {
-    public class EnemyView : MonoBehaviour
+    public struct Enemy
     {
-        public EcsEntity entity;
+        public GameObject gameObject;
+        public Transform transform;
         public NavMeshAgent navMeshAgent;
         public float meleeAttackDistance;
         public float meleeAttackInterval;
         public float triggerDistance;
-        public int startHealth;
         public int damage;
+        public Vector3 startPosition;
+
+        public void Die()
+        {
+            gameObject.SetActive(false);
+        }
     };
 }

@@ -1,17 +1,17 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Leopotam.Ecs;
 using UnityEngine;
 
 namespace Client
 {
-    public class WeaponSettings : MonoBehaviour
+    public struct Weapon
     {
+        public EcsEntity owner;
         public GameObject projectilePrefab;
         public Transform projectileSocket;
-        public int weaponDamage;
+        public float fireInterval;
         public float projectileSpeed;
         public float projectileRadius;
         public float projectileLifetime;
+        public int weaponDamage;
     };
 }

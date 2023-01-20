@@ -2,6 +2,7 @@ namespace Client
 {
     public struct Health
     {
-        public int value;
+        public float shield;
+        public float value;
     };
 }

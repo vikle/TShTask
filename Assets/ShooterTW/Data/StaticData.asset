@@ -13,4 +13,10 @@ MonoBehaviour:
   m_Name: StaticData
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 3374071142278502493, guid: ce9f540fefa7b5c4094322d02aaee38e, type: 3}
-  playerSpeed: 3
+  playerHealth: 100
+  playerSpeed: 5
+  maxEnemies: 20
+  enemySpawnDistance: 20
+  prefabs:
+  - {fileID: 8465319831000171295, guid: 11dc0a949d3734f4986bd62060a3de8f, type: 3}
+  - {fileID: 666896063695637082, guid: 261ea36504a5845418dfa84bb6f71a4a, type: 3}

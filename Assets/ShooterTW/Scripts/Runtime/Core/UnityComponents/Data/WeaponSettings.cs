@@ -1,16 +1,15 @@
-using Leopotam.Ecs;
 using UnityEngine;
 
 namespace Client
 {
-    public struct Weapon
+    public class WeaponSettings : MonoBehaviour
     {
-        public EcsEntity owner;
         public GameObject projectilePrefab;
         public Transform projectileSocket;
+        public float fireInterval = .2f;
+        public int weaponDamage;
         public float projectileSpeed;
         public float projectileRadius;
         public float projectileLifetime;
-        public int weaponDamage;
     };
 }
