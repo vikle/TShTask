@@ -17,8 +17,7 @@ namespace EcsGame
                 
                 if (follow.target.IsAlive() == false)
                 {
-                    ref var entity = ref m_filter.GetEntity(i);
-                    entity.Del<Follow>();
+                    m_filter.GetEntity(i).Del<Follow>();
                     enemy.navMeshAgent.SetDestination(enemy.startPosition);
                     continue;
                 }
@@ -31,14 +30,14 @@ namespace EcsGame
                 enemy_tr.forward = direction;
 
                 float sqr_dist = (enemy.transform.position - target_pos).sqrMagnitude;
-                float sqr_attack_dist = enemy.meleeAttackDistance * enemy.meleeAttackDistance;
-                if (sqr_dist < sqr_attack_dist && Time.time >= follow.nextAttackTime)
-                {
-                    follow.nextAttackTime = Time.time + enemy.meleeAttackInterval;
-                    ref var e = ref m_world.NewEntity().Get<DamageEvent>();
-                    e.target = follow.target;
-                    e.value = enemy.damage;
-                }
+                float attack_dist = enemy.meleeAttackDistance;
+                float sqr_attack_dist = (attack_dist * attack_dist);
+                if (sqr_dist > sqr_attack_dist) continue;
+                if (Time.time < follow.nextAttackTime) continue;
+                follow.nextAttackTime = (Time.time + enemy.meleeAttackInterval);
+                ref var dmg_evt = ref m_world.NewEntity().Get<DamageEvent>();
+                dmg_evt.target = follow.target;
+                dmg_evt.value = enemy.damage;
             }
         }
     };

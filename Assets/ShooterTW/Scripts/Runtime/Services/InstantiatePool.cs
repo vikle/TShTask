@@ -9,9 +9,8 @@ namespace EcsGame
         static Transform s_pool;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        public static void Initialize() => s_pool = new GameObject("InstantiatePool").transform;
-
-        private static void Inject(GameObject original) => sr_pool[original] = new Stack<GameObject>();
+        public static void Initialize() 
+            => s_pool = new GameObject("InstantiatePool").transform;
 
         public static GameObject SpawnObject(GameObject original, in Vector3 position, in Quaternion rotation)
         {
@@ -25,7 +24,7 @@ namespace EcsGame
             }
             else
             {
-                Inject(original);
+                sr_pool[original] = new Stack<GameObject>();
             }
 
             if (clone == null) clone = Object.Instantiate(original);

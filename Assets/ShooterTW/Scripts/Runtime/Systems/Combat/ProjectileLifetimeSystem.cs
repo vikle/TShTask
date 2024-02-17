@@ -11,11 +11,8 @@ namespace EcsGame
         {
             foreach (int i in m_filter)
             {
-                ref var time = ref m_filter.Get2(i);
-                if(Time.time < time.endTime) continue;
-                
-                ref var projectile = ref m_filter.Get1(i);
-                projectile.Deactivate();
+                if(Time.time < m_filter.Get2(i).endTime) continue;
+                m_filter.Get1(i).Deactivate();
                 m_filter.GetEntity(i).Destroy();
             }
         }

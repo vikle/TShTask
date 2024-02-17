@@ -6,7 +6,7 @@ namespace EcsGame
     public sealed class SpawnProjectileSystem : IEcsRunSystem
     {
         readonly EcsWorld m_world;
-        EcsFilter<Weapon, SpawnProjectile> m_filter;
+        readonly EcsFilter<Weapon, SpawnProjectile> m_filter;
 
         void IEcsRunSystem.Run()
         {
@@ -29,8 +29,7 @@ namespace EcsGame
                 ref var projectile_lifetime = ref projectile_entity.Get<ProjectileLifetime>();
                 projectile_lifetime.endTime = weapon.projectileLifetime + Time.time;
 
-                ref var entity = ref m_filter.GetEntity(i);
-                entity.Del<SpawnProjectile>();
+                m_filter.GetEntity(i).Del<SpawnProjectile>();
             }
         }
     };

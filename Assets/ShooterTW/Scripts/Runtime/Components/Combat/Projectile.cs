@@ -13,6 +13,7 @@ namespace EcsGame
         public float radius;
         public int damage;
 
-        public void Deactivate() => InstantiatePool.DeSpawnObject(prefab, gameObject);
+        public void Deactivate() 
+            => InstantiatePool.DeSpawnObject(prefab, gameObject);
     };
 }

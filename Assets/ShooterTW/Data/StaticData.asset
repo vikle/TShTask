@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: StaticData
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 3374071142278502493, guid: ce9f540fefa7b5c4094322d02aaee38e, type: 3}
+  playerShield: 0.3
   playerHealth: 100
   playerSpeed: 5
+  smoothTime: 0.3
+  followOffset: {x: 0, y: 10, z: -6}
   maxEnemies: 20
   enemySpawnDistance: 20
   prefabs:

@@ -23,12 +23,15 @@ namespace EcsGame
                 ref var health = ref enemy_entity.Get<Health>();
 
                 var enemy_prefab = m_staticData.GetRandomEnemyPrefab();
-                var spawn_pos = RandomPointOnCircle(m_staticData.enemySpawnDistance);
+                var spawn_offset = RandomPointOnCircle(m_staticData.enemySpawnDistance);
+                var player_pos = m_runtimeData.playerEntity.Get<Player>().transform.position;
+                var spawn_pos = (player_pos + spawn_offset);
+                
                 var enemy_clone = InstantiatePool.SpawnObject(enemy_prefab, spawn_pos, Quaternion.identity);
                 var enemy_view = enemy_clone.GetComponent<EnemyView>();
+                
                 enemy.gameObject = enemy_clone;
                 enemy.transform = enemy_clone.transform;
-
                 enemy.navMeshAgent = enemy_view.navMeshAgent;
                 enemy.damage = enemy_view.damage;
                 enemy.meleeAttackDistance = enemy_view.meleeAttackDistance;

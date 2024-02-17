@@ -1,3 +1,4 @@
+using System;
 using Leopotam.Ecs;
 using UnityEngine;
 
@@ -16,10 +17,15 @@ namespace EcsGame
         EcsWorld m_world;
         EcsSystems m_updateSystems;
 
+        void Awake()
+        {
+            if (uiCanvas != null) uiCanvas.gameObject.SetActive(true);
+        }
+
         void Start()
         {
-            m_world = new EcsWorld();
-            m_updateSystems = new EcsSystems(m_world);
+            m_world = new();
+            m_updateSystems = new(m_world);
 #if UNITY_EDITOR
             EcsWorldObserver.Create(m_world);
             EcsSystemsObserver.Create(m_updateSystems);
@@ -30,6 +36,7 @@ namespace EcsGame
                 .Add(new PlayerMoveSystem())
                 .Add(new PlayerRotationSystem())
                 .Add(new PlayerDeathSystem())
+                .Add(new CameraFollowSystem())
                 .Add(new WeaponShootSystem())
                 .Add(new SpawnProjectileSystem())
                 .Add(new ProjectileMoveSystem())

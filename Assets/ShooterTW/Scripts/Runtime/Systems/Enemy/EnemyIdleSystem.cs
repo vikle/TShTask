@@ -1,5 +1,4 @@
 using Leopotam.Ecs;
-using UnityEngine;
 
 namespace EcsGame
 {
@@ -13,15 +12,17 @@ namespace EcsGame
             foreach (int i in m_calmEnemies)
             {
                 ref var enemy = ref m_calmEnemies.Get1(i);
-                ref var player = ref m_runtimeData.playerEntity.Get<Player>();
+                var player_pos = m_runtimeData.playerEntity.Get<Player>().transform.position;
+                float sqr_dist = (enemy.transform.position - player_pos).sqrMagnitude;
+                float t_dist = enemy.triggerDistance;
+                float t_sqr_dist = (t_dist * t_dist);
 
-                if ((enemy.transform.position - player.transform.position).sqrMagnitude <= enemy.triggerDistance * enemy.triggerDistance)
-                {
-                    ref var entity = ref m_calmEnemies.GetEntity(i);
-                    entity.Del<Idle>();
-                    ref var follow = ref entity.Get<Follow>();
-                    follow.target = m_runtimeData.playerEntity;
-                }
+                if (sqr_dist > t_sqr_dist) continue;
+                
+                ref var entity = ref m_calmEnemies.GetEntity(i);
+                entity.Del<Idle>();
+                ref var follow = ref entity.Get<Follow>();
+                follow.target = m_runtimeData.playerEntity;
             }
         }
     };
