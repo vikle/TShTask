@@ -1,7 +1,7 @@
 using Leopotam.Ecs;
 using UnityEngine;
 
-namespace Client
+namespace EcsGame
 {
     public struct Weapon
     {

@@ -1,11 +1,11 @@
 using Leopotam.Ecs;
 using UnityEngine;
 
-namespace Client
+namespace EcsGame
 {
-    sealed class EnemyIdleSystem : IEcsRunSystem
+    public sealed class EnemyIdleSystem : IEcsRunSystem
     {
-        EcsFilter<Enemy, Idle> m_calmEnemies;
+        readonly EcsFilter<Enemy, Idle> m_calmEnemies;
         readonly RuntimeData m_runtimeData;
 
         void IEcsRunSystem.Run()

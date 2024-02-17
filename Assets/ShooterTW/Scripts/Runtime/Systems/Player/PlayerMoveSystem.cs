@@ -1,13 +1,13 @@
 using Leopotam.Ecs;
 using UnityEngine;
 
-namespace Client
+namespace EcsGame
 {
-    sealed class PlayerMoveSystem : IEcsRunSystem
+    public sealed class PlayerMoveSystem : IEcsRunSystem
     {
-        EcsFilter<Player, PlayerInputData> m_filter;
+        readonly EcsFilter<Player, PlayerInputData> m_filter;
 
-        public void Run()
+        void IEcsRunSystem.Run()
         {
             foreach (int i in m_filter)
             {

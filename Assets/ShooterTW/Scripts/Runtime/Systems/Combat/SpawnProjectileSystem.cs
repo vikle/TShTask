@@ -1,9 +1,9 @@
 using UnityEngine;
 using Leopotam.Ecs;
 
-namespace Client
+namespace EcsGame
 {
-    sealed class SpawnProjectileSystem : IEcsRunSystem
+    public sealed class SpawnProjectileSystem : IEcsRunSystem
     {
         readonly EcsWorld m_world;
         EcsFilter<Weapon, SpawnProjectile> m_filter;

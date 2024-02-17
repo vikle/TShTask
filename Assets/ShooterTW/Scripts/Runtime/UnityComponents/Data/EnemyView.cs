@@ -2,7 +2,7 @@ using Leopotam.Ecs;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Client
+namespace EcsGame
 {
     public class EnemyView : MonoBehaviour
     {

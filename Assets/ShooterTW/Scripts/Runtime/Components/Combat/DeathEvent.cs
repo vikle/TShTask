@@ -1,4 +1,4 @@
-namespace Client
+namespace EcsGame
 {
     public struct DeathEvent
     {

@@ -1,10 +1,10 @@
 using Leopotam.Ecs;
 
-namespace Client
+namespace EcsGame
 {
-    sealed class WeaponShootSystem : IEcsRunSystem
+    public sealed class WeaponShootSystem : IEcsRunSystem
     {
-        EcsFilter<Weapon, Shoot> m_filter;
+        readonly EcsFilter<Weapon, Shoot> m_filter;
 
         void IEcsRunSystem.Run()
         {

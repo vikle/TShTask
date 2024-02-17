@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Client
+namespace EcsGame
 {
     [CreateAssetMenu]
     public class StaticData : ScriptableObject

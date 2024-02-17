@@ -1,12 +1,12 @@
 using Leopotam.Ecs;
 using UnityEngine;
 
-namespace Client
+namespace EcsGame
 {
-    sealed class EnemyFollowSystem : IEcsRunSystem
+    public sealed class EnemyFollowSystem : IEcsRunSystem
     {
         readonly EcsWorld m_world;
-        EcsFilter<Enemy, Follow> m_filter;
+        readonly EcsFilter<Enemy, Follow> m_filter;
 
         void IEcsRunSystem.Run()
         {
@@ -23,15 +23,14 @@ namespace Client
                     continue;
                 }
                 
-                ref var transform_ref = ref follow.target.Get<TransformRef>();
-                var target_pos = transform_ref.transform.position;
+                var target_pos = follow.target.Get<TransformRef>().transform.position;
                 enemy.navMeshAgent.SetDestination(target_pos);
-                var e_tr = enemy.transform;
-                var direction = (target_pos - e_tr.position).normalized;
+                var enemy_tr = enemy.transform;
+                var direction = (target_pos - enemy_tr.position).normalized;
                 direction.y = 0f;
-                e_tr.forward = direction;
+                enemy_tr.forward = direction;
 
-                float sqr_dist = (enemy.transform.position - transform_ref.transform.position).sqrMagnitude;
+                float sqr_dist = (enemy.transform.position - target_pos).sqrMagnitude;
                 float sqr_attack_dist = enemy.meleeAttackDistance * enemy.meleeAttackDistance;
                 if (sqr_dist < sqr_attack_dist && Time.time >= follow.nextAttackTime)
                 {

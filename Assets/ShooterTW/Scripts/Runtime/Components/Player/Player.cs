@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Client
+namespace EcsGame
 {
     public struct Player
     {

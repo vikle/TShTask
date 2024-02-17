@@ -9,11 +9,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/ShooterTW/Scripts/Runtime/UnityComponents/Data/WeaponSettings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c6b52566f59b49fc861a7812a1ea2f6b157a00/33/95685a7c/Plane.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eaee23183de34a0d83c6df596a7b70d81a000/95/8005bc23/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c6b52566f59b49fc861a7812a1ea2f6b157a00/b9/61dfe254/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c6b52566f59b49fc861a7812a1ea2f6b157a00/11/c2cf848d/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c6b52566f59b49fc861a7812a1ea2f6b157a00/bd/33ea02c6/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/42/System.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c6b52566f59b49fc861a7812a1ea2f6b157a00/75/038d0f25/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/6/System.Threading.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2KUN6pzX81S21mKt77K0d41QkGK" />
   <component name="ProjectViewState">
@@ -24,7 +22,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">

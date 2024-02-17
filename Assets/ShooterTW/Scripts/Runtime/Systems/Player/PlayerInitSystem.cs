@@ -1,22 +1,22 @@
 using UnityEngine;
 using Leopotam.Ecs;
 
-namespace Client
+namespace EcsGame
 {
-    public class PlayerInitSystem : IEcsInitSystem
+    public sealed class PlayerInitSystem : IEcsInitSystem
     {
         readonly EcsWorld m_world;
         readonly StaticData m_staticData;
         readonly SceneData m_sceneData;
         readonly RuntimeData m_runtimeData;
 
-        public void Init()
+        void IEcsInitSystem.Init()
         {
             var player_entity = m_world.NewEntity();
             var weapon_entity = m_world.NewEntity();
             
             ref var player = ref player_entity.Get<Player>();
-            ref var input_data = ref player_entity.Get<PlayerInputData>();
+            player_entity.Get<PlayerInputData>();
             ref var has_weapon = ref player_entity.Get<HasWeapon>();
             ref var transform_ref = ref player_entity.Get<TransformRef>();
             ref var health = ref player_entity.Get<Health>();

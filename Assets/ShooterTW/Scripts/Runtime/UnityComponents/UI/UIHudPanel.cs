@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Client
+namespace EcsGame
 {
     public class UIHudPanel : MonoBehaviour
     {

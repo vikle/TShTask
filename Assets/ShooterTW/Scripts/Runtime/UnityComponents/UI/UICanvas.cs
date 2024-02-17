@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-namespace Client
+namespace EcsGame
 {
     public class UICanvas : MonoBehaviour
     {
         public UIHudPanel hud;
         public UIDeathScreen deathScreen;
 
+        
         void Awake()
         {
             hud.SetScores(0);

@@ -1,14 +1,14 @@
 using Leopotam.Ecs;
 using UnityEngine;
 
-namespace Client
+namespace EcsGame
 {
-    sealed class PlayerRotationSystem : IEcsRunSystem
+    public sealed class PlayerRotationSystem : IEcsRunSystem
     {
-        EcsFilter<Player> m_filter;
-        SceneData m_sceneData;
+        readonly EcsFilter<Player> m_filter;
+        readonly SceneData m_sceneData;
 
-        public void Run()
+        void IEcsRunSystem.Run()
         {
             foreach (int i in m_filter)
             {

@@ -1,9 +1,13 @@
 using Leopotam.Ecs;
 using UnityEngine;
 
-namespace Client
+#if UNITY_EDITOR
+using Leopotam.Ecs.UnityIntegration;
+#endif
+
+namespace EcsGame
 {
-    sealed class EcsStartup : MonoBehaviour
+    public sealed class EcsStartup : MonoBehaviour
     {
         public StaticData configuration;
         public SceneData sceneData;
@@ -16,10 +20,9 @@ namespace Client
         {
             m_world = new EcsWorld();
             m_updateSystems = new EcsSystems(m_world);
-            var runtime_data = new RuntimeData();
 #if UNITY_EDITOR
-            Leopotam.Ecs.UnityIntegration.EcsWorldObserver.Create(m_world);
-            Leopotam.Ecs.UnityIntegration.EcsSystemsObserver.Create(m_updateSystems);
+            EcsWorldObserver.Create(m_world);
+            EcsSystemsObserver.Create(m_updateSystems);
 #endif
             m_updateSystems
                 .Add(new PlayerInitSystem())
@@ -33,7 +36,6 @@ namespace Client
                 .Add(new ProjectileHitSystem())
                 .Add(new ProjectileLifetimeSystem())
                 .Add(new DamageSystem())
-                .Add(new EnemyInitSystem())
                 .Add(new EnemySpawnSystem())
                 .Add(new EnemyIdleSystem())
                 .Add(new EnemyFollowSystem())
@@ -41,14 +43,12 @@ namespace Client
                 .Inject(configuration)
                 .Inject(sceneData)
                 .Inject(uiCanvas)
-                .Inject(runtime_data)
+                .Inject(new RuntimeData())
                 .Init();
         }
 
         void Update()
-        {
-            m_updateSystems?.Run();
-        }
+            => m_updateSystems?.Run();
 
         void OnDestroy()
         {

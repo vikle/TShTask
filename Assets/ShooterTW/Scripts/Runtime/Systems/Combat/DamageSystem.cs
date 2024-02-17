@@ -1,12 +1,12 @@
 using Leopotam.Ecs;
 using UnityEngine;
 
-namespace Client
+namespace EcsGame
 {
-    sealed class DamageSystem : IEcsRunSystem
+    public sealed class DamageSystem : IEcsRunSystem
     {
         readonly UICanvas m_uiCanvas;
-        EcsFilter<DamageEvent> m_filter;
+        readonly EcsFilter<DamageEvent> m_filter;
     
         public void Run()
         {

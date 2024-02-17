@@ -1,12 +1,12 @@
 using Leopotam.Ecs;
 
-namespace Client
+namespace EcsGame
 {
-    sealed class PlayerDeathSystem : IEcsRunSystem
+    public sealed class PlayerDeathSystem : IEcsRunSystem
     {
         readonly RuntimeData m_runtimeData;
         readonly UICanvas m_uiCanvas;
-        EcsFilter<Player, DeathEvent> m_filter;
+        readonly EcsFilter<Player, DeathEvent> m_filter;
 
         void IEcsRunSystem.Run()
         {

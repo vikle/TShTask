@@ -1,11 +1,11 @@
 using Leopotam.Ecs;
 using UnityEngine;
 
-namespace Client
+namespace EcsGame
 {
-    sealed class ProjectileMoveSystem : IEcsRunSystem
+    public sealed class ProjectileMoveSystem : IEcsRunSystem
     {
-        EcsFilter<Projectile> m_filter;
+        readonly EcsFilter<Projectile> m_filter;
     
         public void Run()
         {

@@ -1,6 +1,6 @@
 ﻿using Leopotam.Ecs;
 
-namespace Client
+namespace EcsGame
 {
     public sealed class RuntimeData
     {

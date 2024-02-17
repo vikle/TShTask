@@ -1,11 +1,11 @@
 using Leopotam.Ecs;
 
-namespace Client
+namespace EcsGame
 {
-    sealed class ProjectileHitSystem : IEcsRunSystem
+    public sealed class ProjectileHitSystem : IEcsRunSystem
     {
         readonly EcsWorld m_world;
-        EcsFilter<Projectile, ProjectileHit> m_filter;
+        readonly EcsFilter<Projectile, ProjectileHit> m_filter;
 
         public void Run()
         {

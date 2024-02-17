@@ -3,14 +3,14 @@ using UnityEngine;
 using Leopotam.Ecs;
 using Random = UnityEngine.Random;
 
-namespace Client
+namespace EcsGame
 {
-    sealed class EnemySpawnSystem : IEcsRunSystem
+    public sealed class EnemySpawnSystem : IEcsRunSystem
     {
         readonly EcsWorld m_world;
         readonly StaticData m_staticData;
         readonly RuntimeData m_runtimeData;
-        EcsFilter<SpawnEnemy> m_filter;
+        readonly EcsFilter<SpawnEnemy> m_filter;
 
         void IEcsRunSystem.Run()
         {

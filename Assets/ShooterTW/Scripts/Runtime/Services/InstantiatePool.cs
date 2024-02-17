@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Client
+namespace EcsGame
 {
     public static class InstantiatePool
     {

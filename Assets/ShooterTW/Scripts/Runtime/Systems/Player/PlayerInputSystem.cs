@@ -1,12 +1,12 @@
 using Leopotam.Ecs;
 using UnityEngine;
 
-namespace Client
+namespace EcsGame
 {
-    sealed class PlayerInputSystem : IEcsRunSystem
+    public sealed class PlayerInputSystem : IEcsRunSystem
     {
         readonly RuntimeData m_runtimeData;
-        EcsFilter<PlayerInputData, HasWeapon> m_filter;
+        readonly EcsFilter<PlayerInputData, HasWeapon> m_filter;
 
         void IEcsRunSystem.Run()
         {

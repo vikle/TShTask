@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Client
+namespace EcsGame
 {
     public struct Enemy
     {
