@@ -17,12 +17,15 @@
 
 Основные файлы проекта лежат в ShooterTW
 - Data/StaticData.asset - содержит настройки игрового баланса (игрок, его здоровье/защита) и префабы врагов.
+
 ![image](https://github.com/vikle/TShTask/assets/11353069/f10dbbfe-213d-47d9-9574-3de581870dd0)
   
 - Настройка оружия идет через компонент WeaponSettings, прикрепленный к игроку
+
   ![image](https://github.com/vikle/TShTask/assets/11353069/797659b0-8ed2-40ae-ac0c-85b0627d05a6)
 
 - Настройка здоровья монстров на каждом префабе монстра компонент EnemyView
+
 ![image](https://github.com/vikle/TShTask/assets/11353069/78b8d4f7-f8ff-468f-a3a3-eb8db247c16c)
 
 - Урон рассчитывается в классе DamageSystem
